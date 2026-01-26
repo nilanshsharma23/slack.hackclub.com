@@ -8,6 +8,7 @@ import Footer from '../components/footer'
 import ForceTheme from '../components/force-theme'
 import Nav from '../components/nav'
 import Header from '../components/slack/header'
+import Slides from '../components/slides/Slides'
 
 const ChannelName = ({ children, href }) => (
   <Text
@@ -145,10 +146,20 @@ const Card = ({ children, sx, ...props }) => (
 const SlackPage = () => {
   const nameInputRef = useRef(null)
   const [openGuide, setOpenGuide] = useState(null)
+  const [slidesOpen, setSlidesOpen] = useState(false)
 
   const handleGuideToggle = (index) => {
     setOpenGuide(openGuide === index ? null : index)
   }
+
+  const handleJoinClick = () => {
+    setSlidesOpen(true)
+  }
+
+  const handleSlidesClose = useCallback(() => {
+    setSlidesOpen(false)
+    window.history.pushState(null, '', '/')
+  }, [])
 
   return (
     <>
@@ -160,7 +171,8 @@ const SlackPage = () => {
       />
       <ForceTheme theme="light" />
       <Nav />
-      <Header nameInputRef={nameInputRef} />
+      <Slides isOpen={slidesOpen} onClose={handleSlidesClose} />
+      <Header onJoinClick={handleJoinClick} />
 
       <Box
         as="main"

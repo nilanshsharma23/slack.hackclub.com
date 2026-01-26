@@ -3,7 +3,7 @@ import SlideUp from '../slide-up'
 import usePrefersMotion from '../../lib/use-prefers-motion'
 import useHasMounted from '../../lib/use-has-mounted'
 
-const Content = () => (
+const Content = ({ onJoinClick }) => (
   <Grid gap={3} pt={[5, '100px']} pb={[3, 4]}>
     <Box
       sx={{
@@ -42,8 +42,8 @@ const Content = () => (
         </Text>
         <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Text
-            as="a"
-            href="https://auth.hackclub.com/slack"
+            as="button"
+            onClick={onJoinClick}
             sx={{
               bg: 'red',
               backgroundImage:
@@ -59,6 +59,9 @@ const Content = () => (
               position: 'relative',
               overflow: 'hidden',
               transition: 'transform 0.125s ease-in-out',
+              border: 'none',
+              cursor: 'pointer',
+              fontFamily: 'inherit',
               ':hover': {
                 transform: 'scale(1.05)',
                 backgroundImage:
@@ -90,7 +93,8 @@ const Cover = () => (
 )
 
 const Static = ({
-  img = 'https://cloud-r4rrjh2z8-hack-club-bot.vercel.app/02020-07-25_a1tcva4ch6mmr6j2cfmcb4e9ync3yhar.png'
+  img = 'https://cloud-r4rrjh2z8-hack-club-bot.vercel.app/02020-07-25_a1tcva4ch6mmr6j2cfmcb4e9ync3yhar.png',
+  onJoinClick
 }) => (
   <Box
     as="section"
@@ -103,11 +107,11 @@ const Static = ({
     }}
   >
     <Cover />
-    <Content />
+    <Content onJoinClick={onJoinClick} />
   </Box>
 )
 
-const Slack = () => {
+const Slack = ({ onJoinClick }) => {
   const hasMounted = useHasMounted()
   const prefersMotion = usePrefersMotion()
   if (hasMounted && prefersMotion) {
@@ -151,11 +155,11 @@ const Slack = () => {
           />
         </Box>
         <Cover />
-        <Content nameInputRef />
+        <Content onJoinClick={onJoinClick} />
       </Box>
     )
   } else {
-    return <Static />
+    return <Static onJoinClick={onJoinClick} />
   }
 }
 
