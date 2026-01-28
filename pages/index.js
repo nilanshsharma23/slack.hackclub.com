@@ -230,6 +230,10 @@ const SlackPage = () => {
             isOpen={openGuide === 1}
             onToggle={() => handleGuideToggle(1)}
           >
+            <p><strong>As a new user, you're put into a special welcome channel for new
+              users</strong> who joined around the same time as you. This is overseen by our
+              Gardeners, teen hackers who volunteer to help new users. Don't be shy:
+              ask them a question! It's also a good place to make friends with other new users, and do fun things organized by the Special Activities Division.</p>
             <p>Other than your welcome channel, here are some core channels:</p>
             <p>
               <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0710J7F4U9">#ysws</ChannelName> - At Hack Club, the
@@ -323,6 +327,20 @@ const SlackPage = () => {
             Changelog
           </Heading>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <Box
+              as="article"
+              sx={{ pl: '1rem', borderLeft: '3px solid', borderColor: 'primary' }}
+            >
+              <Text sx={{ fontWeight: 700, color: 'primary', fontSize: '0.9rem' }}>
+                v1.1.0
+              </Text>
+              <Text sx={{ fontSize: '0.8rem', color: 'muted', ml: '0.5rem' }}>
+                January 27 2025
+              </Text>
+              <Text sx={{ ml: '0.5rem', fontSize: '1.15rem', color: 'slate' }}>
+                slides added to onboarding flow
+              </Text>
+            </Box>
             <Box
               as="article"
               sx={{ pl: '1rem', borderLeft: '3px solid', borderColor: 'primary' }}
