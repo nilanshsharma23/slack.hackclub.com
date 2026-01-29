@@ -230,10 +230,11 @@ const SlackPage = () => {
             isOpen={openGuide === 1}
             onToggle={() => handleGuideToggle(1)}
           >
-            <p><strong>As a new user, you're put into a special welcome channel for new
+            <p><strong>As a new user, you&apos;re put into a special welcome channel for new
               users</strong> who joined around the same time as you. This is overseen by our
-              Gardeners, teen hackers who volunteer to help new users. Don't be shy:
-              ask them a question! It's also a good place to make friends with other new users, and do fun things organized by the Special Activities Division.</p>
+              Gardeners, teen hackers who volunteer to help new users. Don&apos;t be shy:
+              ask them a question! It&apos;s also a good place to make friends with other new users, 
+              and do fun things organized by the Special Activities Division.</p>
             <p>Other than your welcome channel, here are some core channels:</p>
             <p>
               <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0710J7F4U9">#ysws</ChannelName> - At Hack Club, the
