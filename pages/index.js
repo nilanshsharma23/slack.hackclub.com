@@ -305,8 +305,7 @@ const SlackPage = () => {
               is short because we expect you to read it, know it, and follow it.
             </p>
             <p>
-              If you want to report misconduct, send a DM to <ChannelName>@shroud</ChannelName>, which
-              reports it to the Fire Department, our moderation team.
+              If you want to report misconduct, send a DM to <ChannelName href="https://hackclub.slack.com/app_redirect?app=A07K4T4FMAS">@shroud</ChannelName>, which reports it to the Fire Department, our moderation team.
             </p>
           </GuideItem>
         </Card>
