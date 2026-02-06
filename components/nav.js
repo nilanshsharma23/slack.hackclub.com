@@ -123,7 +123,7 @@ const Navigation = props => (
     <Link href="https://hackclub.com/clubs">Clubs</Link>
     <Link href="https://hackclub.com/hcb">HCB</Link>
     <Link href="https://hackclub.com/hackathons">Hackathons</Link>
-    <Link href="/">Community</Link>
+    <Link href="/">Join</Link>
     <Link href="https://toolbox.hackclub.com/">Toolbox</Link>
     <Link href="https://flavortown.hackclub.com/?ref=site-nav">Flavortown</Link>
     <Link href="https://blueprint.hackclub.com/?ref=site-nav">Blueprint</Link>
