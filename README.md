@@ -1,6 +1,6 @@
-# slack.hackclub.com
+## slack.Hackclub.com
 
-The Hack Club Slack community landing page.
+The Hack Club Slack's new community landing page.
 
 ## Development
 
