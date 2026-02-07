@@ -1,4 +1,4 @@
-## slack.Hackclub.com
+## slack.hackclub.com
 
 The Hack Club Slack's new community landing page.
 
