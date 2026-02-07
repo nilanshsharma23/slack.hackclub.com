@@ -238,7 +238,7 @@ const SlackPage = () => {
             <p>
               <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0710J7F4U9">#ysws</ChannelName> - At Hack Club, the
               #1 activity is making things! &quot;You Ship, We Ship&quot; is a challenge
-              where you make something and you get a prize in return. Make what?
+              where you make something and you get a prize in return! (sounds fun right). Make what?
               Get what? There are lots of different YSWS, offering different
               prizes for different kinds of projects. Browse{' '}
               <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0710J7F4U9">#ysws</ChannelName> to find a challenge
@@ -294,7 +294,7 @@ const SlackPage = () => {
           >
             <p>
               Hack Club is special, because we insist on making it that way. We
-              will hold you to higher standards than most online spaces.
+              will hold you to higher standards than most other online spaces.
             </p>
             <p>
               Our{' '}
