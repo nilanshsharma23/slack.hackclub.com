@@ -202,7 +202,7 @@ const SlackPage = () => {
               help you.
             </p>
             <p>
-              <strong>Channels:</strong> Channels are places to chat with others and make friends. When you want to talk about
+              <strong>Channels:</strong>The best place to meet new people and have interesting conversations. When you want to talk about
               something, you find the channel with other people who want to talk
               about it, or if that channel doesn&apos;t exist, you make your own!
             </p>
