@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 const slideData = [
   {
     id: 'age',
-    title: 'Hack Club is only for people age 13-18',
+    title: 'Hack Club is only for people aged 13-18',
     description: null,
     primaryButton: { label: 'I am 13-18', action: 'next' },
     secondaryButton: { label: "I'm a different age", action: 'down' },
@@ -17,8 +17,8 @@ const slideData = [
   {
     id: 'conduct',
     title: 'Code of Conduct',
-    description: 'Hack Club is different from other online spaces. We will hold you to high standards that take effort to follow.',
-    primaryButton: { label: 'I know and follow the code', action: 'next' },
+    description: 'Hack Club is different from other online spaces - we will hold you to high standards that take effort to follow.',
+    primaryButton: { label: 'I know and will follow the code', action: 'next' },
     secondaryButton: { label: 'Read the code', action: 'down' },
     downSlide: {
       id: 'conduct-content',
@@ -29,7 +29,7 @@ const slideData = [
   {
     id: 'slack',
     title: 'We use Slack',
-    description: "Slack is our online platform. If you don't know how to use it, we have written guides and living humans who will help you.",
+    description: "Slack is our online platform. If you don't know how to use it, we have written guides and <strong>living humans</strong> who will help you.",
     primaryButton: { label: 'Join Hack Club', action: 'auth' },
     secondaryButton: { label: 'Help with Slack', action: 'down' },
     downSlide: {
