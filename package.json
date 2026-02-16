@@ -11,25 +11,24 @@
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@hackclub/icons": "^0.0.15",
-    "@hackclub/meta": "1.1.32",
+    "@hackclub/meta": "^1.1.33",
     "@hackclub/theme": "^0.3.3",
-    "@mdx-js/react": "^1.6.22",
-    "lodash": "^4.17.21",
-    "next": "^12.3.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scrolllock": "^5.0.1",
+    "@mdx-js/react": "^3.1.1",
+    "lodash": "^4.17.23",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-wrap-balancer": "^1.1.1",
-    "theme-ui": "^0.14.7"
+    "theme-ui": "^0.17.4"
   },
   "devDependencies": {
-    "@types/node": "^25.0.9",
-    "@types/react": "^19.2.8",
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.1.0",
-    "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "eslint": "^10.0.0",
+    "eslint-config-next": "^16.1.6",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
   }
 }

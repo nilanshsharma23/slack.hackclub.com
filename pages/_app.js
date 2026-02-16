@@ -1,14 +1,12 @@
-import React from 'react'
 import Head from 'next/head'
-
 import Meta from '@hackclub/meta'
 import '@hackclub/theme/fonts/reg-bold.css'
 import theme from '../lib/theme'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 import { Provider as BalancerProvider } from 'react-wrap-balancer'
 
 const App = ({ Component, pageProps }) => (
-  <ThemeProvider theme={theme}>
+  <ThemeUIProvider theme={theme}>
     <Meta as={Head}>
       <meta
         name="google-site-verification"
@@ -18,7 +16,7 @@ const App = ({ Component, pageProps }) => (
     <BalancerProvider>
       <Component {...pageProps} />
     </BalancerProvider>
-  </ThemeProvider>
+  </ThemeUIProvider>
 )
 
 export default App

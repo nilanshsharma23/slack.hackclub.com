@@ -5,7 +5,7 @@ import { Box, Container, Flex, Link } from 'theme-ui'
 import theme from '../lib/theme'
 import Icon from './icon'
 import Flag from './flag'
-import ScrollLock from 'react-scrolllock'
+
 
 const rgbaBgColor = (props, opacity) =>
   `rgba(
@@ -112,9 +112,8 @@ const NavBar = styled(Box, {
     margin-left: ${theme.space[1]}px;
     padding: ${theme.space[3]}px;
     text-decoration: none;
-    @media (min-width: 56em) {
-      color: ${props => theme.colors[props.color] || props.color};
-    }
+    color: white;
+    transition: color 0.2s ease;
   }
 `
 
@@ -218,7 +217,7 @@ function Header({ unfixed, color, bgColor, dark, fixed, ...props }) {
         color={baseColor}
         dark={dark}
       />
-      {toggled && <ScrollLock />}
+      {toggled && <style>{`body { overflow: hidden; }`}</style>}
     </Root>
   )
 }
