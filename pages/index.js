@@ -315,7 +315,7 @@ const SlackPage = () => {
             Slack Highlights
           </Heading>
           <Text sx={{ fontSize: '1.15rem', color: 'slate' }}>
-            Joining from India? Check out <ChannelName href="https://hackclub.enterprise.slack.com/archives/C07BRLYTSSK">#india</ChannelName> to
+            Feel like sharing something random from your life? Check out <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0AL2BXLB7V">#self</ChannelName> to
             meet other Indian Hack Clubbers!
           </Text>
         </Card>
