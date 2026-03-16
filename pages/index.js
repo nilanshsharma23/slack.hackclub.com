@@ -44,8 +44,7 @@ const GuideItem = ({ title, children, isOpen, onToggle }) => {
     onToggle()
   }
 
-  const handleTransitionEnd = useCallback(() => {
-  }, [])
+  const handleTransitionEnd = useCallback(() => {}, [])
 
   return (
     <Box
@@ -215,7 +214,10 @@ const SlackPage = () => {
       >
         {/* Guide Section */}
         <Card sx={{ gridColumn: ['1', '1 / -1'] }}>
-          <Heading as="h2" sx={{ fontSize: '3rem', color: 'black', mb: '1rem' }}>
+          <Heading
+            as="h2"
+            sx={{ fontSize: '3rem', color: 'black', mb: '1rem' }}
+          >
             New? Read this first!
           </Heading>
 
@@ -225,25 +227,28 @@ const SlackPage = () => {
             onToggle={() => handleGuideToggle(0)}
           >
             <p>
-              Welcome! Our Slack can be intimidating, but that&apos;s because there
-              is so much happening. We care about you, and wrote this guide to
-              help you.
+              Welcome! Our Slack can be intimidating, but that&apos;s because
+              there is so much happening. We care about you, and wrote this
+              guide to help you.
             </p>
             <p>
-              <strong>Channels:</strong>The best place to meet new people and have interesting conversations. When you want to talk about
+              <strong>Channels:</strong>The best place to meet new people and
+              have interesting conversations. When you want to talk about
               something, you find the channel with other people who want to talk
-              about it, or if that channel doesn&apos;t exist, you make your own!
+              about it, or if that channel doesn&apos;t exist, you make your
+              own!
             </p>
             <p>
               <strong>DMs:</strong> You can also DM individual users or groups
-              of users. This is another way to connect with members of our community!
+              of users. This is another way to connect with members of our
+              community!
             </p>
             <p>
               <strong>Search:</strong> The search bar at the top of your Slack
               is how you find channels to join, find people to DM, and look up
               messages. It has so many hidden functions; for example you can
-              search in a specific channel or DM for a specific message on a specific
-              day!
+              search in a specific channel or DM for a specific message on a
+              specific day!
             </p>
             <p>
               <strong>The Sidebar:</strong> Once you join a channel or start a
@@ -257,20 +262,31 @@ const SlackPage = () => {
             isOpen={openGuide === 1}
             onToggle={() => handleGuideToggle(1)}
           >
-            <p><strong>As a new user, you&apos;re put into a special welcome channel for new
-              users</strong> who joined around the same time as you. This is overseen by our
-              Gardeners - teen hackers who volunteer to help new users. Don&apos;t be shy:
-              ask them a question (they don&apos;t bite.)! It&apos;s also a good place to make friends with other new users, 
-              and do fun things organized by the Special Activities Division.</p>
+            <p>
+              <strong>
+                As a new user, you&apos;re put into a special welcome channel
+                for new users
+              </strong>{' '}
+              who joined around the same time as you. This is overseen by our
+              Gardeners - teen hackers who volunteer to help new users.
+              Don&apos;t be shy: ask them a question (they don&apos;t bite.)!
+              It&apos;s also a good place to make friends with other new users,
+              and do fun things organized by the Special Activities Division.
+            </p>
             <p>Other than your welcome channel, here are some core channels:</p>
             <p>
-              <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0710J7F4U9">#ysws</ChannelName> - At Hack Club, the
-              #1 activity is making things! &quot;You Ship, We Ship&quot; is a challenge
-              where you make something and you get a prize in return! (sounds fun right). Make what?
-              Get what? There are lots of different YSWS, offering different
-              prizes for different kinds of projects. Browse{' '}
-              <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0710J7F4U9">#ysws</ChannelName> to find a challenge
-              and get started.
+              <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0710J7F4U9">
+                #ysws
+              </ChannelName>{' '}
+              - At Hack Club, the #1 activity is making things! &quot;You Ship,
+              We Ship&quot; is a challenge where you make something and you get
+              a prize in return! (sounds fun right). Make what? Get what? There
+              are lots of different YSWS, offering different prizes for
+              different kinds of projects. Browse{' '}
+              <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0710J7F4U9">
+                #ysws
+              </ChannelName>{' '}
+              to find a challenge and get started.
             </p>
             <p>
               Once you find a YSWS you like, join its channel. Many YSWS also
@@ -279,38 +295,59 @@ const SlackPage = () => {
             <p>Here are more key channels:</p>
             <ul>
               <li>
-                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0EA9S0A0">#code</ChannelName> - A channel to get help with
-                code
+                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0EA9S0A0">
+                  #code
+                </ChannelName>{' '}
+                - A channel to get help with code
               </li>
               <li>
-                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C6C026NHJ">#hardware</ChannelName> - A channel to get help
-                with hardware projects
+                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C6C026NHJ">
+                  #hardware
+                </ChannelName>{' '}
+                - A channel to get help with hardware projects
               </li>
               <li>
-                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C01504DCLVD">#scrapbook</ChannelName> - A channel to show off
-                your work in progress, and be amazed by others doing the same!
+                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C01504DCLVD">
+                  #scrapbook
+                </ChannelName>{' '}
+                - A channel to show off your work in progress, and be amazed by
+                others doing the same!
               </li>
             </ul>
             <ul>
               <li>
-                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0266FRGT">#announcements</ChannelName> - Big announcements
+                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0266FRGT">
+                  #announcements
+                </ChannelName>{' '}
+                - Big announcements
               </li>
               <li>
-                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C05B6DBN802">#happenings</ChannelName> - A biweekly roundup of
-                cool stuff happening on the Slack
+                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C05B6DBN802">
+                  #happenings
+                </ChannelName>{' '}
+                - A biweekly roundup of cool stuff happening on the Slack
               </li>
               <li>
-                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C01AS1YEM8A">#neighbourhood</ChannelName> - A channel to help
-                you find even more channels! Channels channel channels!
+                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C01AS1YEM8A">
+                  #neighbourhood
+                </ChannelName>{' '}
+                - A channel to help you find even more channels! Channels
+                channel channels!
               </li>
               <li>
-                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C078Q8PBD4G">#library</ChannelName> - An app that shows the
-                newest and most active channels. We really like channels!
+                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C078Q8PBD4G">
+                  #library
+                </ChannelName>{' '}
+                - An app that shows the newest and most active channels. We
+                really like channels!
               </li>
               <li>
-                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0266FRGV">#lounge</ChannelName> - A channel for general
-                discussion. Remember to follow the code of conduct everywhere in
-                the Slack. &quot;General discussion&quot; does not mean spam or bullying.
+                <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0266FRGV">
+                  #lounge
+                </ChannelName>{' '}
+                - A channel for general discussion. Remember to follow the code
+                of conduct everywhere in the Slack. &quot;General
+                discussion&quot; does not mean spam or bullying.
               </li>
             </ul>
           </GuideItem>
@@ -332,7 +369,11 @@ const SlackPage = () => {
               is short because we expect you to read it, know it, and follow it.
             </p>
             <p>
-              If you want to report misconduct, send a DM to <ChannelName href="https://hackclub.slack.com/app_redirect?app=A07K4T4FMAS">@shroud</ChannelName>, which reports it to the Fire Department, our moderation team.
+              If you want to report misconduct, send a DM to{' '}
+              <ChannelName href="https://hackclub.slack.com/app_redirect?app=A07K4T4FMAS">
+                @shroud
+              </ChannelName>
+              , which reports it to the Fire Department, our moderation team.
             </p>
           </GuideItem>
         </Card>
@@ -359,49 +400,75 @@ const SlackPage = () => {
             </Text>
           )}
           <Text sx={{ fontSize: '1.15rem', color: 'slate' }}>
-            Feel like sharing something random from your life? Check out <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0AL2BXLB7V">#self</ChannelName>
+            Feel like sharing something random from your life? Check out{' '}
+            <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0AL2BXLB7V">
+              #self
+            </ChannelName>{' '}
+            to meet other Indian Hack Clubbers!
           </Text>
         </Card>
 
         {/* Changelog */}
         <Card>
-          <Heading as="h2" sx={{ fontSize: '3rem', color: 'black', mb: '1rem' }}>
+          <Heading
+            as="h2"
+            sx={{ fontSize: '3rem', color: 'black', mb: '1rem' }}
+          >
             Changelog
           </Heading>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <Box
               as="article"
-              sx={{ pl: '1rem', borderLeft: '3px solid', borderColor: 'primary' }}
+              sx={{
+                pl: '1rem',
+                borderLeft: '3px solid',
+                borderColor: 'primary'
+              }}
             >
-              <Text sx={{ fontWeight: 700, color: 'primary', fontSize: '0.9rem' }}>
+              <Text
+                sx={{ fontWeight: 700, color: 'primary', fontSize: '0.9rem' }}
+              >
                 v1.3.0
               </Text>
               <Text sx={{ fontSize: '0.8rem', color: 'muted', ml: '0.5rem' }}>
                 March 16 2026
               </Text>
               <Text sx={{ ml: '0.5rem', fontSize: '1.15rem', color: 'slate' }}>
-               channel suggestions based on your location
+                Country and US state channel suggestions based on your location
               </Text>
             </Box>
             <Box
               as="article"
-              sx={{ pl: '1rem', borderLeft: '3px solid', borderColor: 'primary' }}
+              sx={{
+                pl: '1rem',
+                borderLeft: '3px solid',
+                borderColor: 'primary'
+              }}
             >
-              <Text sx={{ fontWeight: 700, color: 'primary', fontSize: '0.9rem' }}>
+              <Text
+                sx={{ fontWeight: 700, color: 'primary', fontSize: '0.9rem' }}
+              >
                 v1.2.0
               </Text>
               <Text sx={{ fontSize: '0.8rem', color: 'muted', ml: '0.5rem' }}>
                 March 10 2026
               </Text>
               <Text sx={{ ml: '0.5rem', fontSize: '1.15rem', color: 'slate' }}>
-                <a href="https://news.hackclub.com">Slacker News</a> and Prometheus launched
+                <a href="https://news.hackclub.com">Slacker News</a> and
+                Prometheus launched
               </Text>
             </Box>
             <Box
               as="article"
-              sx={{ pl: '1rem', borderLeft: '3px solid', borderColor: 'primary' }}
+              sx={{
+                pl: '1rem',
+                borderLeft: '3px solid',
+                borderColor: 'primary'
+              }}
             >
-              <Text sx={{ fontWeight: 700, color: 'primary', fontSize: '0.9rem' }}>
+              <Text
+                sx={{ fontWeight: 700, color: 'primary', fontSize: '0.9rem' }}
+              >
                 v1.1.0
               </Text>
               <Text sx={{ fontSize: '0.8rem', color: 'muted', ml: '0.5rem' }}>
@@ -413,9 +480,15 @@ const SlackPage = () => {
             </Box>
             <Box
               as="article"
-              sx={{ pl: '1rem', borderLeft: '3px solid', borderColor: 'primary' }}
+              sx={{
+                pl: '1rem',
+                borderLeft: '3px solid',
+                borderColor: 'primary'
+              }}
             >
-              <Text sx={{ fontWeight: 700, color: 'primary', fontSize: '0.9rem' }}>
+              <Text
+                sx={{ fontWeight: 700, color: 'primary', fontSize: '0.9rem' }}
+              >
                 v1.0.0
               </Text>
               <Text sx={{ fontSize: '0.8rem', color: 'muted', ml: '0.5rem' }}>

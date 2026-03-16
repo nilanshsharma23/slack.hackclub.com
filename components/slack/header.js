@@ -30,7 +30,7 @@ const Content = ({ onJoinClick }) => (
       <Card
         sx={{
           variant: 'cards.translucent',
-          maxWidth: t => `calc(${t.sizes.narrow} * 1.2)`,
+          maxWidth: (t) => `calc(${t.sizes.narrow} * 1.2)`,
           mx: 'auto',
           textAlign: 'center'
         }}
@@ -40,7 +40,14 @@ const Content = ({ onJoinClick }) => (
           <br />
           Join up to make friends, find projects, and have fun.
         </Text>
-        <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            gap: 3,
+            justifyContent: 'center',
+            flexWrap: 'wrap'
+          }}
+        >
           <Text
             as="button"
             onClick={onJoinClick}
@@ -85,7 +92,7 @@ const Cover = () => (
       top: 0,
       left: 0,
       right: 0,
-      backgroundImage: t => t.util.gx('cyan', 'purple'),
+      backgroundImage: (t) => t.util.gx('cyan', 'purple'),
       opacity: 0.625,
       zIndex: 1
     }}

@@ -17,7 +17,8 @@ const slideData = [
   {
     id: 'conduct',
     title: 'Code of Conduct',
-    description: 'Hack Club is different from other online spaces - we will hold you to high standards that take effort to follow.',
+    description:
+      'Hack Club is different from other online spaces - we will hold you to high standards that take effort to follow.',
     primaryButton: { label: 'I know and will follow the code', action: 'next' },
     secondaryButton: { label: 'Read the code', action: 'down' },
     downSlide: {
@@ -29,7 +30,8 @@ const slideData = [
   {
     id: 'slack',
     title: 'We use Slack',
-    description: "Slack is our online platform. If you don't know how to use it, we have written guides and <strong>living humans</strong> who will help you.",
+    description:
+      "Slack is our online platform. If you don't know how to use it, we have written guides and <strong>living humans</strong> who will help you.",
     primaryButton: { label: 'Join Hack Club', action: 'auth' },
     secondaryButton: { label: 'Help with Slack', action: 'down' },
     downSlide: {
@@ -48,7 +50,8 @@ const PrimaryButton = ({ children, onClick }) => (
     onClick={onClick}
     sx={{
       bg: 'red',
-      backgroundImage: 'radial-gradient(ellipse farthest-corner at top left, #ff8c37, #ec3750)',
+      backgroundImage:
+        'radial-gradient(ellipse farthest-corner at top left, #ff8c37, #ec3750)',
       color: 'white',
       fontSize: [2, 3],
       px: 5,
@@ -62,7 +65,8 @@ const PrimaryButton = ({ children, onClick }) => (
       textAlign: 'center',
       ':hover': {
         transform: 'scale(1.05)',
-        backgroundImage: 'radial-gradient(ellipse farthest-corner at bottom right, #ff8c37, #ec3750)'
+        backgroundImage:
+          'radial-gradient(ellipse farthest-corner at bottom right, #ff8c37, #ec3750)'
       }
     }}
   >
@@ -146,7 +150,9 @@ const SlideContent = ({ slide, onAction }) => (
       {slide.secondaryFirst ? (
         <>
           {slide.secondaryButton && (
-            <SecondaryButton onClick={() => onAction(slide.secondaryButton.action)}>
+            <SecondaryButton
+              onClick={() => onAction(slide.secondaryButton.action)}
+            >
               {slide.secondaryButton.label}
             </SecondaryButton>
           )}
@@ -164,7 +170,9 @@ const SlideContent = ({ slide, onAction }) => (
             </PrimaryButton>
           )}
           {slide.secondaryButton && (
-            <SecondaryButton onClick={() => onAction(slide.secondaryButton.action)}>
+            <SecondaryButton
+              onClick={() => onAction(slide.secondaryButton.action)}
+            >
               {slide.secondaryButton.label}
             </SecondaryButton>
           )}
@@ -203,8 +211,8 @@ const SlackGuideContent = () => (
     </Heading>
     <Box sx={{ fontSize: [1, 2], color: 'slate', '& p': { mb: 3 } }}>
       <p>
-        Welcome! Our Slack can be intimidating, but that&apos;s because there is so
-        much happening. We care about you, and wrote this guide to help you.
+        Welcome! Our Slack can be intimidating, but that&apos;s because there is
+        so much happening. We care about you, and wrote this guide to help you.
       </p>
       <p>
         <strong>Channels:</strong> Channels are to Slack what food is to a
@@ -236,9 +244,7 @@ const ConductContent = ({ content, loading, error }) => (
     <Heading as="h2" sx={{ fontSize: [3, 4], color: 'black', mb: 3 }}>
       Code of Conduct
     </Heading>
-    {loading && (
-      <Text sx={{ color: 'slate', fontSize: 2 }}>Loading...</Text>
-    )}
+    {loading && <Text sx={{ color: 'slate', fontSize: 2 }}>Loading...</Text>}
     {error && (
       <Box>
         <Text sx={{ color: 'slate', fontSize: 2, mb: 2 }}>
@@ -295,7 +301,7 @@ const DownSlideContent = ({ slide, onUp, conductData }) => {
     >
       <Box
         sx={{
-          backgroundImage: t => t.util.gx('cyan', 'purple'),
+          backgroundImage: (t) => t.util.gx('cyan', 'purple'),
           height: '15vh',
           minHeight: '80px',
           display: 'flex',
@@ -353,45 +359,55 @@ const Slides = ({ isOpen, onClose }) => {
   const [currentX, setCurrentX] = useState(0)
   const [currentY, setCurrentY] = useState(0)
   const [slideDirection, setSlideDirection] = useState('right')
-  const [conductData, setConductData] = useState({ content: null, loading: false, error: null })
+  const [conductData, setConductData] = useState({
+    content: null,
+    loading: false,
+    error: null
+  })
 
   const updateUrl = useCallback((x, y) => {
     const path = `/join${x > 0 ? `/${x + 1}` : ''}${y > 0 ? '/info' : ''}`
     window.history.pushState({ x, y, slides: true }, '', path)
   }, [])
 
-  const navigateTo = useCallback((x, y, direction) => {
-    setSlideDirection(direction)
-    setCurrentX(x)
-    setCurrentY(y)
-    updateUrl(x, y)
-  }, [updateUrl])
+  const navigateTo = useCallback(
+    (x, y, direction) => {
+      setSlideDirection(direction)
+      setCurrentX(x)
+      setCurrentY(y)
+      updateUrl(x, y)
+    },
+    [updateUrl]
+  )
 
-  const handleAction = useCallback((action) => {
-    switch (action) {
-      case 'next':
-        if (currentX < slideData.length - 1) {
-          navigateTo(currentX + 1, 0, 'right')
-        }
-        break
-      case 'prev':
-        if (currentX > 0) {
-          navigateTo(currentX - 1, 0, 'left')
-        } else {
-          onClose()
-        }
-        break
-      case 'down':
-        navigateTo(currentX, 1, 'down')
-        break
-      case 'up':
-        navigateTo(currentX, 0, 'up')
-        break
-      case 'auth':
-        window.location.href = 'https://auth.hackclub.com/slack'
-        break
-    }
-  }, [currentX, navigateTo, onClose])
+  const handleAction = useCallback(
+    (action) => {
+      switch (action) {
+        case 'next':
+          if (currentX < slideData.length - 1) {
+            navigateTo(currentX + 1, 0, 'right')
+          }
+          break
+        case 'prev':
+          if (currentX > 0) {
+            navigateTo(currentX - 1, 0, 'left')
+          } else {
+            onClose()
+          }
+          break
+        case 'down':
+          navigateTo(currentX, 1, 'down')
+          break
+        case 'up':
+          navigateTo(currentX, 0, 'up')
+          break
+        case 'auth':
+          window.location.href = 'https://auth.hackclub.com/slack'
+          break
+      }
+    },
+    [currentX, navigateTo, onClose]
+  )
 
   const handleBack = useCallback(() => {
     if (currentY > 0) {
@@ -409,7 +425,14 @@ const Slides = ({ isOpen, onClose }) => {
     const handlePopState = (event) => {
       if (event.state?.slides) {
         const { x, y } = event.state
-        const direction = x < currentX ? 'left' : x > currentX ? 'right' : y < currentY ? 'up' : 'down'
+        const direction =
+          x < currentX
+            ? 'left'
+            : x > currentX
+              ? 'right'
+              : y < currentY
+                ? 'up'
+                : 'down'
         setSlideDirection(direction)
         setCurrentX(x)
         setCurrentY(y)
@@ -436,7 +459,12 @@ const Slides = ({ isOpen, onClose }) => {
       if (e.key === 'Escape') onClose()
       if (e.key === 'ArrowRight' && currentY === 0) handleAction('next')
       if (e.key === 'ArrowLeft' && currentY === 0) handleAction('prev')
-      if (e.key === 'ArrowDown' && slideData[currentX]?.downSlide && currentY === 0) handleAction('down')
+      if (
+        e.key === 'ArrowDown' &&
+        slideData[currentX]?.downSlide &&
+        currentY === 0
+      )
+        handleAction('down')
       if (e.key === 'ArrowUp' && currentY > 0) handleAction('up')
     }
     window.addEventListener('keydown', handleKeyDown)
@@ -447,11 +475,11 @@ const Slides = ({ isOpen, onClose }) => {
     if (currentY === 1 && slideData[currentX]?.downSlide?.type === 'fetch') {
       setConductData({ content: null, loading: true, error: null })
       fetch('/api/conduct')
-        .then(res => {
+        .then((res) => {
           if (!res.ok) throw new Error('Failed to fetch')
           return res.text()
         })
-        .then(html => {
+        .then((html) => {
           setConductData({ content: html, loading: false, error: null })
         })
         .catch(() => {
@@ -507,7 +535,7 @@ const Slides = ({ isOpen, onClose }) => {
           sx={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: t => t.util.gx('cyan', 'purple'),
+            backgroundImage: (t) => t.util.gx('cyan', 'purple'),
             zIndex: 0
           }}
         />

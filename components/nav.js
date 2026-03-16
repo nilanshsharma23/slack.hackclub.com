@@ -6,7 +6,6 @@ import theme from '../lib/theme'
 import Icon from './icon'
 import Flag from './flag'
 
-
 const rgbaBgColor = (props, opacity) =>
   `rgba(
     ${props.bgColor[0]},
@@ -15,22 +14,23 @@ const rgbaBgColor = (props, opacity) =>
     ${opacity}
   )`
 
-const fixed = props =>
+const fixed = (props) =>
   (props.scrolled || props.toggled || props.fixed) &&
   css`
     background-color: ${rgbaBgColor(props, 0.96875)};
     border-bottom: 1px solid rgba(48, 48, 48, 0.125);
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
       background-color: ${props.transparent
-      ? 'transparent'
-      : rgbaBgColor(props, 0.75)};
+        ? 'transparent'
+        : rgbaBgColor(props, 0.75)};
       -webkit-backdrop-filter: saturate(180%) blur(20px);
       backdrop-filter: saturate(180%) blur(20px);
     }
   `
 
 const Root = styled(Box, {
-  shouldForwardProp: prop => !['bgColor', 'scrolled', 'toggled'].includes(prop)
+  shouldForwardProp: (prop) =>
+    !['bgColor', 'scrolled', 'toggled'].includes(prop)
 })`
   position: fixed;
   top: 0;
@@ -50,7 +50,7 @@ export const Content = styled(Container)`
   z-index: 2;
 `
 
-const hoverColor = name =>
+const hoverColor = (name) =>
   ({
     white: 'smoke',
     smoke: 'muted',
@@ -65,7 +65,7 @@ const slide = keyframes({
   to: { transform: 'translateY(0)', opacity: 1 }
 })
 
-const layout = props =>
+const layout = (props) =>
   props.isMobile
     ? css`
         display: ${props.toggled ? 'flex' : 'none'};
@@ -104,7 +104,7 @@ const layout = props =>
         }
       `
 const NavBar = styled(Box, {
-  shouldForwardProp: prop => !['isMobile', 'toggled'].includes(prop)
+  shouldForwardProp: (prop) => !['isMobile', 'toggled'].includes(prop)
 })`
   display: none;
   ${layout};
@@ -117,7 +117,7 @@ const NavBar = styled(Box, {
   }
 `
 
-const Navigation = props => (
+const Navigation = (props) => (
   <NavBar role="navigation" {...props}>
     <Link href="https://hackclub.com/clubs">Clubs</Link>
     <Link href="https://hackclub.com/hcb">HCB</Link>
@@ -155,7 +155,7 @@ function Header({ unfixed, color, bgColor, dark, fixed, ...props }) {
   }
 
   const handleToggleMenu = () => {
-    setToggled(t => !t)
+    setToggled((t) => !t)
   }
 
   useEffect(() => {

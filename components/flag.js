@@ -20,7 +20,7 @@ const waveFlagScaled = keyframes`
   }
 `
 
-const scrolled = props =>
+const scrolled = (props) =>
   props.scrolled &&
   css`
     transform: scale(0.875);
@@ -56,7 +56,7 @@ const Base = styled('a')`
   ${scrolled};
 `
 
-const Flag = props => (
+const Flag = (props) => (
   <Base href="https://hackclub.com" title="Hack Club Homepage" {...props} />
 )
 
