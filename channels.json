@@ -1,0 +1,408 @@
+[
+  {
+    "channel": "argentina",
+    "match": "argentina",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C0ACYBB7CTW",
+    "id": "C0ACYBB7CTW"
+  },
+  {
+    "channel": "australia",
+    "match": "australia",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08NL76BMUN",
+    "id": "C08NL76BMUN"
+  },
+  {
+    "channel": "bangladesh",
+    "match": "bangladesh",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C09UT0U2VSR",
+    "id": "C09UT0U2VSR"
+  },
+  {
+    "channel": "belgium",
+    "match": "belgium",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C09HQEK457W",
+    "id": "C09HQEK457W"
+  },
+  {
+    "channel": "cameroon",
+    "match": "cameroon",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08LP31PBL3",
+    "id": "C08LP31PBL3"
+  },
+  {
+    "channel": "canada",
+    "match": "canada",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/CNSG76VFW",
+    "id": "CNSG76VFW"
+  },
+  {
+    "channel": "china",
+    "match": "china",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08778E9D8D",
+    "id": "C08778E9D8D"
+  },
+  {
+    "channel": "colombia-coding",
+    "match": "colombia",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C080E8RDDHR",
+    "id": "C080E8RDDHR"
+  },
+  {
+    "channel": "denmark",
+    "match": "denmark",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C096X333BSQ",
+    "id": "C096X333BSQ"
+  },
+  {
+    "channel": "egypt",
+    "match": "egypt",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C02H6J7TCAX",
+    "id": "C02H6J7TCAX"
+  },
+  {
+    "channel": "finland",
+    "match": "finland",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08PS4Z8FJ9",
+    "id": "C08PS4Z8FJ9"
+  },
+  {
+    "channel": "france",
+    "match": "france",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C082J2U1LF5",
+    "id": "C082J2U1LF5"
+  },
+  {
+    "channel": "germany",
+    "match": "germany",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C07GC0LPGSW",
+    "id": "C07GC0LPGSW"
+  },
+  {
+    "channel": "hong-kong",
+    "match": "hong-kong",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08H6SF0ZSM",
+    "id": "C08H6SF0ZSM"
+  },
+  {
+    "channel": "hungary",
+    "match": "hungary",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C0968L8TLF2",
+    "id": "C0968L8TLF2"
+  },
+  {
+    "channel": "india",
+    "match": "india",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C07BRLYTSSK",
+    "id": "C07BRLYTSSK"
+  },
+  {
+    "channel": "indonesia",
+    "match": "indonesia",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C086JA1JFGT",
+    "id": "C086JA1JFGT"
+  },
+  {
+    "channel": "ireland",
+    "match": "ireland",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C07RN5BLJH5",
+    "id": "C07RN5BLJH5"
+  },
+  {
+    "channel": "kenya",
+    "match": "kenya",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C07346PH2JG",
+    "id": "C07346PH2JG"
+  },
+  {
+    "channel": "korea",
+    "match": "korea",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C060HHVG2UV",
+    "id": "C060HHVG2UV"
+  },
+  {
+    "channel": "luxembourg",
+    "match": "luxembourg",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C09SZHD1NTD",
+    "id": "C09SZHD1NTD"
+  },
+  {
+    "channel": "malaysia",
+    "match": "malaysia",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C07M6R9M5JB",
+    "id": "C07M6R9M5JB"
+  },
+  {
+    "channel": "nepal",
+    "match": "nepal",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08R2UPGR0C",
+    "id": "C08R2UPGR0C"
+  },
+  {
+    "channel": "new-zealand",
+    "match": "new-zealand",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C07TSJZHJCC",
+    "id": "C07TSJZHJCC"
+  },
+  {
+    "channel": "nigeria",
+    "match": "nigeria",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/CNE8ZRDFZ",
+    "id": "CNE8ZRDFZ"
+  },
+  {
+    "channel": "pakistan",
+    "match": "pakistan",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C029J05HWGY",
+    "id": "C029J05HWGY"
+  },
+  {
+    "channel": "philippines",
+    "match": "philippines",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C09STLNBNBH",
+    "id": "C09STLNBNBH"
+  },
+  {
+    "channel": "portugal",
+    "match": "portugal",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C086Q95SR4J",
+    "id": "C086Q95SR4J"
+  },
+  {
+    "channel": "romania-gang-",
+    "match": "romania",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C07BHP4LC6Q",
+    "id": "C07BHP4LC6Q"
+  },
+  {
+    "channel": "russia",
+    "match": "russia",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08NUNR4GJ0",
+    "id": "C08NUNR4GJ0"
+  },
+  {
+    "channel": "rwanda",
+    "match": "rwanda",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08CJ6Y0PBR",
+    "id": "C08CJ6Y0PBR"
+  },
+  {
+    "channel": "singapore-hangout",
+    "match": "singapore",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C04M6780C2H",
+    "id": "C04M6780C2H"
+  },
+  {
+    "channel": "spain",
+    "match": "spain",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08NYLKP41J",
+    "id": "C08NYLKP41J"
+  },
+  {
+    "channel": "sri-lanka",
+    "match": "sri-lanka",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C0978TN3LRY",
+    "id": "C0978TN3LRY"
+  },
+  {
+    "channel": "sweden",
+    "match": "sweden",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C083NMGNLPL",
+    "id": "C083NMGNLPL"
+  },
+  {
+    "channel": "hackclub-switzerland",
+    "match": "switzerland",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C07N3PLRRLK",
+    "id": "C07N3PLRRLK"
+  },
+  {
+    "channel": "taiwan",
+    "match": "taiwan",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08VDLF6X8R",
+    "id": "C08VDLF6X8R"
+  },
+  {
+    "channel": "turkey-turkiye",
+    "match": "turkey",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C0ABP6DHPFD",
+    "id": "C0ABP6DHPFD"
+  },
+  {
+    "channel": "uae",
+    "match": "uae",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C07NSE5BXRC",
+    "id": "C07NSE5BXRC"
+  },
+  {
+    "channel": "uk",
+    "match": "uk",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C034M4ACDCN",
+    "id": "C034M4ACDCN"
+  },
+  {
+    "channel": "united-states",
+    "match": "united-states",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C0788JYFZKJ",
+    "id": "C0788JYFZKJ"
+  },
+  {
+    "channel": "usa",
+    "match": "usa",
+    "type": "country",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08P5R3CQ0Z",
+    "id": "C08P5R3CQ0Z"
+  },
+  {
+    "channel": "dc",
+    "match": "dc",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C08PJP04K5E",
+    "id": "C08PJP04K5E"
+  },
+  {
+    "channel": "florida",
+    "match": "florida",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C09ED6DH1J4",
+    "id": "C09ED6DH1J4"
+  },
+  {
+    "channel": "idaho",
+    "match": "idaho",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C0AHD3HEGPR",
+    "id": "C0AHD3HEGPR"
+  },
+  {
+    "channel": "kentucky",
+    "match": "kentucky",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C086SJEBVQB",
+    "id": "C086SJEBVQB"
+  },
+  {
+    "channel": "maryland",
+    "match": "maryland",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C081TMSUC0P",
+    "id": "C081TMSUC0P"
+  },
+  {
+    "channel": "minnesota",
+    "match": "minnesota",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C03U9TA7LGN",
+    "id": "C03U9TA7LGN"
+  },
+  {
+    "channel": "new-hampshire",
+    "match": "new-hampshire",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C0367HF9ZM1",
+    "id": "C0367HF9ZM1"
+  },
+  {
+    "channel": "new-jersey",
+    "match": "new-jersey",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C0A81B4N1MW",
+    "id": "C0A81B4N1MW"
+  },
+  {
+    "channel": "new-york",
+    "match": "new-york",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C029VBNK0UV",
+    "id": "C029VBNK0UV"
+  },
+  {
+    "channel": "north-dakota",
+    "match": "north-dakota",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C0ADD53M75Y",
+    "id": "C0ADD53M75Y"
+  },
+  {
+    "channel": "ohio",
+    "match": "ohio",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C07U8CAP8Q3",
+    "id": "C07U8CAP8Q3"
+  },
+  {
+    "channel": "pennsylvania",
+    "match": "pennsylvania",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C079XMUDLLQ",
+    "id": "C079XMUDLLQ"
+  },
+  {
+    "channel": "texas",
+    "match": "texas",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C023VNXPRPD",
+    "id": "C023VNXPRPD"
+  },
+  {
+    "channel": "utah",
+    "match": "utah",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C043HJ0P332",
+    "id": "C043HJ0P332"
+  },
+  {
+    "channel": "vermont",
+    "match": "vermont",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C060Q8UE4BZ",
+    "id": "C060Q8UE4BZ"
+  },
+  {
+    "channel": "virginia",
+    "match": "virginia",
+    "type": "us-state",
+    "url": "https://app.slack.com/client/E09V59WQY1E/C099PTJM5FF",
+    "id": "C099PTJM5FF"
+  }
+]

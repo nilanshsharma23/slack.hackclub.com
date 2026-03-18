@@ -2,6 +2,7 @@ import Meta from '@hackclub/meta'
 import Head from 'next/head'
 import { Box, Heading, Text, Link as ThemeLink } from 'theme-ui'
 import { useState, useRef, useCallback } from 'react'
+import channels from '../channels.json'
 
 import { thousands } from '../lib/members'
 import Footer from '../components/footer'
@@ -146,6 +147,46 @@ const SlackPage = () => {
   const nameInputRef = useRef(null)
   const [openGuide, setOpenGuide] = useState(null)
   const [slidesOpen, setSlidesOpen] = useState(false)
+  const [countryChannel, setCountryChannel] = useState(null)
+  const [stateChannel, setStateChannel] = useState(null)
+  const [geoLoading, setGeoLoading] = useState(false)
+
+  const handleGeolocate = () => {
+    setGeoLoading(true)
+    fetch('https://ipapi.co/json/')
+      .then((res) => res.json())
+      .then((data) => {
+        const country = (data.country_name || '')
+          .toLowerCase()
+          .replace(/[\s-]+/g, '-')
+        const countryMatch = channels.find(
+          (c) =>
+            c.type === 'country' &&
+            (country.includes(c.match) || c.match.includes(country))
+        )
+        if (countryMatch) {
+          setCountryChannel({
+            name: data.country_name,
+            code: data.country_code,
+            channel: countryMatch
+          })
+        }
+
+        if (data.country_code === 'US' && data.region) {
+          const region = data.region.toLowerCase().replace(/[\s-]+/g, '-')
+          const stateMatch = channels.find(
+            (c) =>
+              c.type === 'us-state' &&
+              (region.includes(c.match) || c.match.includes(region))
+          )
+          if (stateMatch) {
+            setStateChannel({ name: data.region, channel: stateMatch })
+          }
+        }
+      })
+      .catch(() => {})
+      .finally(() => setGeoLoading(false))
+  }
 
   const handleGuideToggle = (index) => {
     setOpenGuide(openGuide === index ? null : index)
@@ -355,12 +396,73 @@ const SlackPage = () => {
           <Heading as="h2" sx={{ fontSize: '3rem', color: 'black', mb: 0 }}>
             Slack Highlights
           </Heading>
+          {countryChannel ? (
+            <Text sx={{ fontSize: '1.15rem', color: 'slate' }}>
+              Hey, it looks like you&apos;re from
+              {stateChannel
+                ? ` ${stateChannel.name}, ${countryChannel.code}`
+                : ` ${countryChannel.name}`}
+              ! Join fellow hack clubbers in{' '}
+              <ChannelName href={countryChannel.channel.url}>
+                #{countryChannel.channel.channel}
+              </ChannelName>
+              {stateChannel && (
+                <>
+                  {' '}
+                  and{' '}
+                  <ChannelName href={stateChannel.channel.url}>
+                    #{stateChannel.channel.channel}
+                  </ChannelName>
+                </>
+              )}
+            </Text>
+          ) : (
+            <Text
+              as="button"
+              onClick={handleGeolocate}
+              disabled={geoLoading}
+              sx={{
+                bg: 'red',
+                backgroundImage:
+                  'radial-gradient(ellipse farthest-corner at top left, #ff8c37, #ec3750)',
+                color: 'white',
+                fontSize: 2,
+                px: 4,
+                py: 3,
+                borderRadius: 'extra',
+                fontWeight: 'bold',
+                textDecoration: 'none',
+                display: 'inline-block',
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'transform 0.125s ease-in-out',
+                border: 'none',
+                cursor: geoLoading ? 'default' : 'pointer',
+                fontFamily: 'inherit',
+                opacity: geoLoading ? 0.7 : 1,
+                ':hover:not(:disabled)': {
+                  transform: 'scale(1.05)',
+                  backgroundImage:
+                    'radial-gradient(ellipse farthest-corner at bottom right, #ff8c37, #ec3750)'
+                }
+              }}
+            >
+              {geoLoading ? (
+                'Looking up…'
+              ) : (
+                <>
+                   Find Your regional channel
+                  <br />
+                  (shares your IP with geolocation service)
+                </>
+              )}
+            </Text>
+          )}
           <Text sx={{ fontSize: '1.15rem', color: 'slate' }}>
             Feel like sharing something random from your life? Check out{' '}
             <ChannelName href="https://hackclub.enterprise.slack.com/archives/C0AL2BXLB7V">
               #self
             </ChannelName>{' '}
-            to meet other Indian Hack Clubbers!
           </Text>
         </Card>
 
@@ -373,6 +475,26 @@ const SlackPage = () => {
             Changelog
           </Heading>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <Box
+              as="article"
+              sx={{
+                pl: '1rem',
+                borderLeft: '3px solid',
+                borderColor: 'primary'
+              }}
+            >
+              <Text
+                sx={{ fontWeight: 700, color: 'primary', fontSize: '0.9rem' }}
+              >
+                v1.3.0
+              </Text>
+              <Text sx={{ fontSize: '0.8rem', color: 'muted', ml: '0.5rem' }}>
+                March 16 2026
+              </Text>
+              <Text sx={{ ml: '0.5rem', fontSize: '1.15rem', color: 'slate' }}>
+                Country and US state channel suggestions based on your location
+              </Text>
+            </Box>
             <Box
               as="article"
               sx={{
