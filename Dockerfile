@@ -38,10 +38,9 @@ USER nextjs
 
 EXPOSE 80
 
-ENV PORT=80
 ENV HOSTNAME="0.0.0.0"
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
   CMD wget --no-verbose --tries=1 --spider http://localhost:80/ || exit 1
 
-CMD ["bun", "server.js"]
+CMD PORT=80 HOSTNAME=0.0.0.0 bun server.js
