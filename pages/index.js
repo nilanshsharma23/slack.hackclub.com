@@ -44,7 +44,7 @@ const GuideItem = ({ title, children, isOpen, onToggle }) => {
     onToggle()
   }
 
-  const handleTransitionEnd = useCallback(() => {}, [])
+  const handleTransitionEnd = useCallback(() => { }, [])
 
   return (
     <Box
@@ -184,7 +184,7 @@ const SlackPage = () => {
           }
         }
       })
-      .catch(() => {})
+      .catch(() => { })
       .finally(() => setGeoLoading(false))
   }
 
@@ -269,7 +269,9 @@ const SlackPage = () => {
               it in the way that makes sense to you.
             </p>
 
-            <p>Want more information about the Slack? Read <a href="https://readme.hackclub.com/slack">readme</a>!</p>
+            <p>Want more information about the Slack? Read <ThemeLink href="https://readme.hackclub.com/slack">
+              readme
+            </ThemeLink>!</p>
           </GuideItem>
 
           <GuideItem
@@ -365,8 +367,6 @@ const SlackPage = () => {
                 discussion&quot; does not mean spam or bullying.
               </li>
             </ul>
-
-            <p>Want to learn more about Hack Club? Read <a href="https://readme.hackclub.com">readme</a>!</p>
           </GuideItem>
 
           <GuideItem
@@ -455,7 +455,7 @@ const SlackPage = () => {
                 'Looking up…'
               ) : (
                 <>
-                   Find Your regional channel
+                  Find Your regional channel
                   <br />
                   (shares your IP with geolocation service)
                 </>
@@ -516,8 +516,10 @@ const SlackPage = () => {
                 March 10 2026
               </Text>
               <Text sx={{ ml: '0.5rem', fontSize: '1.15rem', color: 'slate' }}>
-                <a href="https://news.hackclub.com">Slacker News</a> and
-                Prometheus launched
+                <ThemeLink href="https://news.hackclub.com">
+                  Slacker News
+                </ThemeLink>{' '}
+                and Prometheus launched
               </Text>
             </Box>
             <Box
