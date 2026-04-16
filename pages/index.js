@@ -268,6 +268,14 @@ const SlackPage = () => {
               DM, it lives in your sidebar. You can play around and reorganize
               it in the way that makes sense to you.
             </p>
+
+            <p>
+              Want more information about Slack? Read the{' '}
+              <ThemeLink href="https://readme.hackclub.com/slack">
+                readme
+              </ThemeLink>
+              !
+            </p>
           </GuideItem>
 
           <GuideItem
@@ -451,7 +459,7 @@ const SlackPage = () => {
                 'Looking up…'
               ) : (
                 <>
-                   Find Your regional channel
+                  Find your regional channel
                   <br />
                   (shares your IP with geolocation service)
                 </>
@@ -512,8 +520,10 @@ const SlackPage = () => {
                 March 10 2026
               </Text>
               <Text sx={{ ml: '0.5rem', fontSize: '1.15rem', color: 'slate' }}>
-                <a href="https://news.hackclub.com">Slacker News</a> and
-                Prometheus launched
+                <ThemeLink href="https://news.hackclub.com">
+                  Slacker News
+                </ThemeLink>{' '}
+                and Prometheus launched
               </Text>
             </Box>
             <Box
