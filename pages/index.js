@@ -269,13 +269,6 @@ const SlackPage = () => {
               it in the way that makes sense to you.
             </p>
 
-            <p>
-              Want more information about Slack? Read the{' '}
-              <ThemeLink href="https://readme.hackclub.com/slack">
-                readme
-              </ThemeLink>
-              !
-            </p>
           </GuideItem>
 
           <GuideItem
@@ -367,10 +360,16 @@ const SlackPage = () => {
                   #lounge
                 </ChannelName>{' '}
                 - A channel for general discussion. Remember to follow the code
-                of conduct everywhere in the Slack. &quot;General
-                discussion&quot; does not mean spam or bullying.
+                of conduct everywhere in the Slack.
               </li>
             </ul>
+            <p>
+              Want more information about Slack? Read the{' '}
+              <ThemeLink href="https://readme.hackclub.com/slack">
+                readme
+              </ThemeLink>
+              !
+            </p>
           </GuideItem>
 
           <GuideItem
