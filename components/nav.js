@@ -21,8 +21,8 @@ const fixed = (props) =>
     border-bottom: 1px solid rgba(48, 48, 48, 0.125);
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
       background-color: ${props.transparent
-        ? 'transparent'
-        : rgbaBgColor(props, 0.75)};
+      ? 'transparent'
+      : rgbaBgColor(props, 0.75)};
       -webkit-backdrop-filter: saturate(180%) blur(20px);
       backdrop-filter: saturate(180%) blur(20px);
     }
@@ -120,12 +120,10 @@ const NavBar = styled(Box, {
 const Navigation = (props) => (
   <NavBar role="navigation" {...props}>
     <Link href="https://hackclub.com/clubs">Clubs</Link>
-    <Link href="https://hackclub.com/hcb">HCB</Link>
+    <Link href="https://hackclub.com/hcb">Fiscal Sponsorship</Link>
     <Link href="https://hackclub.com/hackathons">Hackathons</Link>
     <Link href="/">Join</Link>
     <Link href="https://toolbox.hackclub.com/">Toolbox</Link>
-    <Link href="https://flavortown.hackclub.com/?ref=site-nav">Flavortown</Link>
-    <Link href="https://blueprint.hackclub.com/?ref=site-nav">Blueprint</Link>
     <Link href="https://hackclub.com/philanthropy">Donors</Link>
   </NavBar>
 )
